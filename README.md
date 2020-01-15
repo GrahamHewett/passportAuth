@@ -1,6 +1,6 @@
-## Passport Starter
+## Passport Login Strategies Demo
 
-Starting point for the youtube tutorial series @ https://www.youtube.com/watch?v=A23O4aUftXk
+Demo project using passport.js to Login using different strategies such as OAuth2 for Google, Github and Spotify. JWTs will also be looked at.
 
-In this tutorial series we'll be learning how to use different passport strategies for OAuth2 login 
-authentication for some of your favorite socials including Facebook, Instagram, Google, Twitch, Github, and Amazon!
+Some useful Youtube instructional videos to aid further understanding are:
+https://www.youtube.com/watch?v=A23O4aUftXk by Ryan Hirst
