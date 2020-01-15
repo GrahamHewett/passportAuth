@@ -6,6 +6,9 @@
     "chalk": "3.0.0",
     "cors": "2.8.5",
     "express": "4.17.1",
+    "http-proxy-middleware": "0.20.0",
+    "nodemon": "2.0.2",
+    "npm-run-all": "4.1.5",
     "passport": "0.4.1",
     "passport-spotify": "1.1.0",
     "react": "^16.8.6",
@@ -18,8 +21,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon src/backend/server.js",
+    "run-all": "npm-run-all -p server start"
   },
+  "proxy": "http://localhost:8888",
   "eslintConfig": {
     "extends": "react-app"
   },

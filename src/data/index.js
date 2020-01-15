@@ -1,10 +1,10 @@
-import AmazonIcon from "../res/amazon.png";
-import FacebookIcon from "../res/facebook.png";
-import GithubIcon from "../res/github.png";
-import GoogleIcon from "../res/google.png";
-import InstagramIcon from "../res/instagram.png";
-import SpotifyIcon from "../res/spotify.png";
-import TwitchIcon from "../res/twitch.png";
+import AmazonIcon from "./pic/amazon.png";
+import FacebookIcon from "./pic/facebook.png";
+import GithubIcon from "./pic/github.png";
+import GoogleIcon from "./pic/google.png";
+import InstagramIcon from "./pic/instagram.png";
+import SpotifyIcon from "./pic/spotify.png";
+import TwitchIcon from "./pic/twitch.png";
 
 export const data = [{
     img: AmazonIcon,

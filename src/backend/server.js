@@ -1,10 +1,10 @@
 const express = require('express'),
 cors = require('cors'),
 passport = require('passport'),
-spotifyStrategy = require('spotifyStrategy').Strategy,
+SpotifyStrategy = require('passport-spotify').Strategy,
 chalk = require('chalk'),
-keys = require('../../config'),
-user = {}; //database substitute
+keys = require('../../config');
+let user = {}; //database substitute
 const app = express();
 
 passport.serializeUser(function(user, done) {
@@ -23,7 +23,7 @@ passport.use(
 	  function(accessToken, refreshToken, expires_in, profile, done) {
 		  console.log(chalk.blue(JSON.stringify(profile)));
 		  user = {...profile};
-		  return done(err, user);
+		  return done(null, user);
 		// User.findOrCreate({ spotifyId: profile.id }, function(err, user) {
 		//   return done(err, user);
 		// });
@@ -47,7 +47,7 @@ app.use(passport.initialize())
 	passport.authenticate('spotify', { failureRedirect: '/login' }),
 	function(req, res) {
 	  // Successful authentication, redirect home.
-	  res.redirect('/');
+	  res.redirect('http://localhost:3000/profile');
 	}
   );
 
@@ -63,9 +63,7 @@ app.get('/auth/logout', (req, res) => {
 });
 
 const PORT = process.env.PORT || 8888;
-app.listen('Server is listening on port ', PORT);
+app.listen(PORT);
+console.log('server is listening on port ', PORT)
 // Testing npm install --dev
 // make test
-
-
-

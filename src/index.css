@@ -12,6 +12,8 @@ body {
     background-color: #fff7f7;
 }
 
+a {text-decoration: none;}
+
 pre {
     white-space: pre-wrap;       /* Since CSS 2.1 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -95,7 +97,7 @@ button {
 }
 
 .page {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 
