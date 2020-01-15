@@ -9,9 +9,6 @@ const UserProvider = ({children}) => {
 		.then(res => res.json())
 		.then(profile => setUser(profile))
 		.catch(err => console.log(err))
-		return () => {
-			cleanup
-		};
 	}, [])
 
 	return <context.Provider value={user}>
