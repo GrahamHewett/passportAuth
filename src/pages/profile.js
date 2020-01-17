@@ -17,11 +17,13 @@ export default function Profile() {
     const options = Object.keys(userData).filter(key => {
         return userData[key] !== null;
     });
+    const accessKey = new URLSearchParams(document.location.search.substring(1)).get('code')
 
     return (
         <div className="page">
             <p className="page-title" style={{ textAlign: "center" }}>
-                {text}
+                {text} your 
+                token is {accessKey}
             </p>
 
                 <DataTags

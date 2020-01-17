@@ -46,8 +46,10 @@ app.use(passport.initialize())
 	'/auth/spotify/callback',
 	passport.authenticate('spotify', { failureRedirect: '/login' }),
 	function(req, res) {
+		console.log('token code start from req.query.code', req.query.code,
+		' alternative from req._parsedUrl.search', req._parsedUrl.search)
 	  // Successful authentication, redirect home.
-	  res.redirect('http://localhost:3000/profile');
+	  res.redirect('http://localhost:3000/profile' + req._parsedUrl.search);
 	}
   );
 
